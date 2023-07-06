@@ -1,0 +1,22 @@
+{
+  "name": "mysql-insert-splitter",
+  "version": "1.0.0",
+  "author": "Vadym <unclevader@gmail.com>",
+  "contributors": [
+    "ChatGPT (https://chat.openai.com)"
+  ],
+  "description": "The tool for split one INSERT ... VALUES (arg1,arg2,arg3,...) to separated INSERTs per argument. This could be used if a huge dump file with one INSERT command and dozen arguments, which could crash MySQL if you want to run such script. The tool was written in collaboration with ChatGPT, original chat here https://chat.openai.com/share/a1d67476-2701-46f9-9165-575466b7a19f",
+  "keywords": ["mysql tool","mysql dump splitter","mysql one insert to many","chat gpt"],
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UncleVader/mysql-insert-splitter.git"
+  },
+  "scripts": {
+    "debug": "node --trace-uncaught --experimental-modules --inspect --inspect-brk --inspect-port=9230 app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "readline": "^1.3.0"
+  }
+}
